@@ -1,0 +1,17 @@
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff --color-words --ignore-space-at-eol -b -w --ignore-blank-lines
+  lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all -n 10v
+  lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(red)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+  
+[core]
+  pager = "less -RXF"
+  excludesfile = ~/.gitignore_global
+  editor = vim
+  autocrlf = input
+
+[push]
+  default = simple

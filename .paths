@@ -1,0 +1,16 @@
+# Set PATH
+
+# Core
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# Latex
+export PATH="/usr/local/texlive/2015/bin/x86_64-darwin/:$PATH"
+export PATH="/usr/texbin:$PATH"
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
+
