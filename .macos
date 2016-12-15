@@ -304,7 +304,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 58
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
@@ -330,7 +330,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock expose-animation-duration -float 0.3
 
 # Don’t group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
@@ -348,7 +348,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.3
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -730,15 +730,14 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
-
+cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
 
-# Use `~/Documents/Torrents` to store incomplete downloads
+# Use `~/Download/Torrents` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Download/Torrents"
 
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
