@@ -31,7 +31,7 @@ brew install homebrew/dupes/screen
 # Install other useful binaries.
 brew install \
   git rename go sbt scala ffmpeg zsh unrar \
-  youtube-dl zsh-completions mas
+  youtube-dl zsh-completions mas tree
   
 # Change shell to zsh
 chsh -s /usr/local/bin/zsh
@@ -67,6 +67,9 @@ brew cask install \
 # Install App from Mac App Store
 mas signin jb.cdnr@gmail.com
 mas install 512617038 # SnappyApp
+mas install 409201541 # Pages
+mas install 409203825 # Numbers
+mas install 409183694 # Keynote
 
 # Remove outdated versions from the cellar.
 brew cleanup
