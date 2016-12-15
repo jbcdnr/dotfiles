@@ -38,7 +38,6 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 		"/System/Library/CoreServices/Menu Extras/User.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
-	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
@@ -200,7 +199,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -565,7 +564,7 @@ tell application "Terminal"
 	(* Open the custom theme so that it gets added to the list
 	   of available terminal themes (note: this will open two
 	   additional terminal windows). *)
-	do shell script "open '$HOME/init/" & themeName & ".terminal'"
+	do shell script "open '$HOME/dotfiles/init/" & themeName & ".terminal'"
 
 	(* Wait a little bit to ensure that the custom theme is added. *)
 	delay 1
@@ -609,7 +608,7 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
-open "${HOME}/init/Solarized Dark.itermcolors"
+open "${HOME}/dotfiles/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -730,7 +729,7 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.
+cp -r dotfiles/init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################

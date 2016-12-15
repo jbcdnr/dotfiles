@@ -6,7 +6,8 @@ git pull origin master;
 
 declare -a dotfiles=('zshrc' 'gitconfig' 'gitignore_global' 'vimrc' 'paths' 'extra' 'exports' 'aliases' 'functions')
 
-declare -a dirs=('init' '.vim')
+# declare -a dirs=('init' '.vim')
+declare -a dirs=('.vim')
 
 function doIt() {
    for dotfile in "${dotfiles[@]}"; do
