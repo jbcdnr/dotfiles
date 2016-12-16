@@ -18,6 +18,7 @@ function doIt() {
   rsync  --exclude ".gitignore" \
     --exclude ".DS_Store" \
     -avh --no-perms "${dirs[@]}" ~;
+    ln -s "$HOME/dotfiles/init/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
