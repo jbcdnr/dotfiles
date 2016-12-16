@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Install Homebrew.
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
@@ -30,14 +33,11 @@ brew install homebrew/dupes/screen
 
 # Install other useful binaries.
 brew install \
-  git rename go sbt scala ffmpeg zsh unrar \
+  git rename go ffmpeg zsh unrar \
   youtube-dl zsh-completions mas tree
-  
-# Change shell to zsh
-chsh -s /usr/local/bin/zsh
 
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Change shell to zsh
+chsh -s /bin/zsh
 
 # Install caskroom
 brew install caskroom/cask/brew-cask
@@ -51,19 +51,24 @@ brew tap caskroom/fonts
 brew cask install \
 	qlcolorcode qlmarkdown qlprettypatch qlstephen \
 	qlimagesize \
-	quicklook-csv quicklook-json epubquicklook \
-	animated-gif-quicklook
+	quicklook-csv quicklook-json epubquicklook
 
 # Install font tools.
 brew cask install font-inconsolata
 brew cask install font-inconsolata-dz
 
+# Install JVM
+brew cask install java
+
+# Install scala environment
+brew install sbt scala
+
 # Install applications
 brew cask install \
   spotify dropbox transmission vlc skype \
-  sublime-text3 calibre spectacle karabiner \
+  sublime-text calibre spectacle karabiner-elements \
   slack iterm2 google-chrome firefox mactex
-  
+
 # Install App from Mac App Store
 mas signin jb.cdnr@gmail.com
 mas install 512617038 # SnappyApp
