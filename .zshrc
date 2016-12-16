@@ -1,5 +1,4 @@
 
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -8,32 +7,38 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-# Auto-complete configuration 
+# Auto-complete configuration
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # CONFIG
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_UPDATE="false"
 
-# ANTIGEN
-source $HOME/.antigen.zsh
+# install zgen for the first time
+[ -e "$HOME/.zgen/zgen.zsh" ] || git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# load zgen
+source "$HOME/.zgen/zgen.zsh"
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle sbt
-antigen bundle scala
-antigen bundle go
-antigen bundle sudo
-antigen bundle sublime
-antigen bundle osx
+# if the init scipt doesn't exist
+if ! zgen saved; then
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+  # plugins
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/sbt
+  zgen oh-my-zsh plugins/scala
+  zgen oh-my-zsh plugins/go
+  zgen oh-my-zsh plugins/sudo
+  zgen oh-my-zsh plugins/sublime
+  zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/colored-man
 
-# Load the theme.
-antigen theme minimal
+  # themes
+  zgen oh-my-zsh themes/minimal
 
-# Tell antigen that you're done.
-antigen apply
+  # generate the init script from plugins above
+  zgen save
+
+  # to regenerate settings run
+  # zgen reset
+fi
