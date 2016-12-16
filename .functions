@@ -187,6 +187,17 @@ function addtopath() {
 		echo "ERROR: Variable $PATH_FILE undefined.";
 		return 1;
 	fi;
-	
-	echo "export PATH=\"\$PATH:$1\"" >> $PATH_FILE
+
+	echo "export PATH=\$PATH:$1" >> $PATH_FILE
+}
+
+function mount-ntfs() {
+  if [ -z "${1}" ]; then
+    echo "ERROR: No disk to mount.";
+    return 1;
+  fi;
+  sudo umount "/Volumes/$1" 2> /dev/null
+  sudo mkdir -p "/Volumes/$1"
+  id=$(diskutil list | grep -m 1 $1 | grep -oE '[^ ]+$')
+  sudo /usr/local/bin/ntfs-3g "/dev/$id" "/Volumes/$1" -olocal -oallow_other
 }
