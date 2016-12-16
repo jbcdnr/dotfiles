@@ -3,7 +3,6 @@
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
-	"open_files_in_new_window": false,
 	"file_exclude_patterns":
 	[
 		".DS_Store",
@@ -23,9 +22,14 @@
 	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"line_padding_bottom": 5,
 	"match_brackets": true,
 	"match_brackets_angle": true,
+	"open_files_in_new_window": false,
 	"remember_open_files": false,
 	"rulers":
 	[

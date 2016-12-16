@@ -67,7 +67,8 @@ brew install sbt scala
 brew cask install \
   spotify dropbox transmission vlc skype \
   sublime-text calibre spectacle karabiner-elements \
-  slack iterm2 google-chrome firefox mactex
+  slack iterm2 google-chrome firefox mactex nosleep \
+  microsoft-office
 
 # Install App from Mac App Store
 mas signin jb.cdnr@gmail.com
