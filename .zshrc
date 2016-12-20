@@ -2,7 +2,7 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,exports,aliases,functions,extra}; do
+for file in ~/.{paths,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -31,10 +31,9 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/sublime
   zgen oh-my-zsh plugins/osx
-  zgen oh-my-zsh plugins/colored-man
 
   # themes
-  zgen oh-my-zsh themes/minimal
+  zgen load ~/.minimal.zsh-theme
 
   # generate the init script from plugins above
   zgen save
