@@ -17,3 +17,7 @@ export PATH="/usr/texbin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export PATH=$PATH:/Users/jb/bin
+
+# Brew
+export PATH=$PATH:/usr/local/sbin
