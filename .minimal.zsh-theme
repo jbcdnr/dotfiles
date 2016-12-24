@@ -29,4 +29,4 @@ elif [[ $LOGNAME != $USER ]]; then
   NAME="%n "
 fi
 
-PROMPT='%B'$NAME'%2~ $(vcs_status)»%b '
+PROMPT='%B'$NAME'%3~ $(vcs_status)»%b '
