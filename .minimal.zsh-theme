@@ -23,7 +23,7 @@ vcs_status() {
 
 NAME=""
 LOGNAME=jb
-if [[ -n $SSH_CONNECTION ]]; then
+if [[ ! -z $SSH_CONNECTION ]]; then
   NAME="%n@%m "
 elif [[ $LOGNAME != $USER ]]; then
   NAME="%n "
