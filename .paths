@@ -10,7 +10,7 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 
 # Latex
-export PATH="/usr/local/texlive/2015/bin/x86_64-darwin/:$PATH"
+export PATH="/usr/local/texlive/2015/bin/x86_64-darwin:$PATH"
 export PATH="/usr/texbin:$PATH"
 
 # Go
