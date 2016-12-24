@@ -19,6 +19,9 @@ function doIt() {
     --exclude ".DS_Store" \
     -avh --no-perms "${dirs[@]}" ~;
 
+  # reset zgen
+  zgen reset
+
   # link sublime text settings for macOS
   [[ `uname` == "Darwin" ]] && ln -s "$HOME/dotfiles/init/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 }
