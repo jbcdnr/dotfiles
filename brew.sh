@@ -68,7 +68,7 @@ brew cask install \
   spotify dropbox transmission vlc skype \
   sublime-text calibre spectacle karabiner-elements \
   slack iterm2 google-chrome firefox mactex nosleep \
-  microsoft-office macdown skim
+  microsoft-office macdown skim anaconda
 
 # Install App from Mac App Store
 mas signin jb.cdnr@gmail.com
