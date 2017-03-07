@@ -41,3 +41,5 @@ if ! zgen saved; then
   # to regenerate settings run
   # zgen reset
 fi
+
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
