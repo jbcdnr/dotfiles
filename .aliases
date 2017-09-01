@@ -6,17 +6,13 @@ alias copy=pbcopy
 alias paste=pbpaste
 
 # Always use color output for `ls`
-alias ls="command ls ${colorflag}"
+alias ls="ls --color=auto"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# Show/hide hidden files in Finder
-alias showhf="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hidehf="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
