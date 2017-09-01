@@ -21,6 +21,3 @@ export PATH=$PATH:/Users/jb/bin
 
 # Brew
 export PATH=$PATH:/usr/local/sbin
-
-# Anaconda
-export PATH=~/anaconda3/bin:"$PATH"

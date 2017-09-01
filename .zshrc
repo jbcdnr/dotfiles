@@ -43,3 +43,4 @@ if ! zgen saved; then
 fi
 
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+source /usr/local/bin/virtualenvwrapper.sh
