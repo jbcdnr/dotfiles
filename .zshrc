@@ -40,6 +40,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_UPDATE="false"
 
-eval "$(dircolors ~/dotfiles/ressources/dircolors-solarized/dircolors.256dark)"
+eval "$(dircolors ~/dotfiles/ressources/dircolors.256dark)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
