@@ -2,7 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
+git status
 
 declare -a dotfiles=('zshrc' 'gitconfig' 'gitignore_global' 'vimrc' 'paths' 'extra' 'exports' 'aliases' 'minimal.zsh-theme')
 
@@ -19,11 +19,8 @@ function doIt() {
     --exclude ".DS_Store" \
     -avh --no-perms "${dirs[@]}" ~;
 
-  # reset zgen
-  zgen reset
-
   # link sublime text settings for macOS
-  [[ `uname` == "Darwin" ]] && ln -s "$HOME/dotfiles/ressources/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+  [[ `uname` == "Darwin" ]] && ln -fs "$HOME/dotfiles/ressources/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
