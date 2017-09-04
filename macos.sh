@@ -18,3 +18,8 @@ defaults write com.apple.dock wvous-br-corner -integer 1        # Bottom right n
 
 # Reload
 killall Dock
+
+# Three fingers drag enabled
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+
