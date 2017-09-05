@@ -9,5 +9,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install the bundle in Brewfile
-brew bundle
+# Install the bundle in .Brewfile
+brew bundle --global
+
