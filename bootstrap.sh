@@ -4,7 +4,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git status
 
-declare -a dotfiles=('zshrc' 'gitconfig' 'gitignore_global' 'vimrc' 'paths' 'extra' 'exports' 'aliases' 'minimal.zsh-theme')
+declare -a dotfiles=('zshrc' 'gitconfig' 'gitignore_global' 'vimrc' 'paths' 'extra' 'exports' 'aliases' 'minimal.zsh-theme' 'Brewfile')
 
 declare -a dirs=('.vim')
 
