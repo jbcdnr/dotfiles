@@ -43,4 +43,6 @@ DISABLE_AUTO_UPDATE="false"
 eval "$(dircolors ~/dotfiles/ressources/dircolors.256dark)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-export PATH="$PATH:$HOME/.rvm/bin"
+# Z set up
+. /usr/local/etc/profile.d/z.sh
+

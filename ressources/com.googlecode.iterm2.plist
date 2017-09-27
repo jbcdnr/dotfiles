@@ -435,6 +435,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>D598C2C0-48E8-4079-9A77-B8188FBFFBF5</string>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -477,9 +479,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>279 1266 796 473 -346 800 1920 1057 </string>
+	<string>-346 1476 918 381 -346 800 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-343 805 1914 1047 -346 800 1920 1057 </string>
+	<string>0 325 570 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 318 570 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -1794,7 +1796,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-04T14:38:58Z</date>
+	<date>2017-09-20T07:26:49Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1806,6 +1808,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.1</string>
 </dict>
 </plist>
