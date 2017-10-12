@@ -28,3 +28,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# live sync with watch and rsync
+function rsyncw {
+  echo "sync $1 -> $2"
+  rsync -avhz --delete $1 $2
+  fswatch -o --latency=1 $1 | while read -r; do rsync -avhz --delete $1 $2; done
+}
+
