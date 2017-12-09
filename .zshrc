@@ -44,5 +44,6 @@ eval "$(dircolors ~/dotfiles/ressources/dircolors.256dark)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Z set up
-. /usr/local/etc/profile.d/z.sh
-
+if [ -f /usr/local/etc/profile.d/z.sh ]; then
+  . /usr/local/etc/profile.d/z.sh
+fi
