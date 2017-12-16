@@ -19,3 +19,5 @@
 [user]
   name = Jean-Baptiste Cordonnier
   email = jbcdnr@gmail.com
+[pull]
+	rebase = true
