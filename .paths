@@ -22,3 +22,4 @@ export PATH=$PATH:/Users/jb/bin
 # Brew
 export PATH=$PATH:/usr/local/sbin
 
+export PATH=$PATH:$HOME/bin
