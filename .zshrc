@@ -15,6 +15,8 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/sublime
   zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/gcloud
+  zgen oh-my-zsh plugins/kubectl
 
   # themes
   zgen load ~/.minimal.zsh-theme
