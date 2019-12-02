@@ -89,3 +89,12 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+" Plugin
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
