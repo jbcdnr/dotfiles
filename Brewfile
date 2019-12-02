@@ -107,7 +107,6 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
-cask "rstudio"
 cask "skim"
 cask "skype"
 cask "slack"
@@ -116,12 +115,9 @@ cask "spotify"
 cask "steam"
 cask "sublime-text"
 cask "telegram"
-cask "tikz-editor"
 cask "transmission"
-cask "typora"
 cask "visual-studio-code"
 cask "vlc"
-cask "whatsapp"
 cask "caskroom/fonts/font-inconsolata"
 cask "caskroom/fonts/font-inconsolata-dz"
 cask "caskroom/fonts/font-open-sans"
@@ -130,5 +126,4 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Snappy", id: 512617038
 mas "Xcode", id: 497799835
