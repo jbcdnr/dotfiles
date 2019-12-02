@@ -22,7 +22,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting
 
   # themes
-  zgen load ~/.minimal.zsh-theme
+  zgen load denysdovhan/spaceship-prompt spaceship
 
   # generate the init script from plugins above
   zgen save
@@ -34,7 +34,7 @@ fi
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{paths,exports,aliases,extra}; do
+for file in ~/.{paths,exports,aliases,extra,prompt}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
