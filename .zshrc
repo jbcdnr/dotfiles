@@ -17,6 +17,9 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/osx
   zgen oh-my-zsh plugins/gcloud
   zgen oh-my-zsh plugins/kubectl
+  zgen oh-my-zsh plugins/thefuck
+
+  zgen load zsh-users/zsh-syntax-highlighting
 
   # themes
   zgen load ~/.minimal.zsh-theme
