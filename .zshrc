@@ -52,3 +52,9 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 if [ -f /usr/local/etc/profile.d/z.sh ]; then
   . /usr/local/etc/profile.d/z.sh
 fi
+
+# disable conda environment prefix
+if hash conda 2>/dev/null; then
+  conda config --set changeps1 False
+fi
+
