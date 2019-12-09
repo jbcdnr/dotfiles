@@ -25,7 +25,7 @@ Please open an issue if you get in troubles.
 Install [HomeBrew](https://brew.sh/) and then some really useful software:
 
 ```bash
-brew cask install iterm2 sublime-text visual-studio-code skim
+brew cask install iterm2 sublime-text visual-studio-code skim spectacle
 brew install parallel tmux vim thefuck zsh
 ```
 
