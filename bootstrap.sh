@@ -21,6 +21,10 @@ function doIt() {
 
   # link sublime text settings for macOS
   [[ `uname` == "Darwin" ]] && ln -fs "$HOME/dotfiles/ressources/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+
+  # install vim plugin manager
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
