@@ -33,5 +33,6 @@ export PATH="/Applications/Sketch.app/Contents/Resources/sketchtool/bin:$PATH"
 # Ruby
 export PATH=/usr/local/opt/ruby/bin:$PATH
 
-export PATH=/Users/cordonni/.local/bin/:$PATH
+# binaries
+export PATH=$HOME/.local/bin/:$PATH
 
