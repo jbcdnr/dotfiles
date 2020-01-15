@@ -6,7 +6,7 @@ git status
 
 declare -a dotfiles=('zshrc' 'zshenv' 'bashrc' 'gitconfig' 'gitignore_global' 'vimrc' 'paths' 'extra' 'exports' 'aliases' 'prompt' 'tmux.conf')
 
-declare -a dirs=('.vim')
+declare -a dirs=('.vim .ssh')
 
 function doIt() {
   for dotfile in "${dotfiles[@]}"; do
