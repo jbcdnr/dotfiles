@@ -39,3 +39,19 @@ function watch {
 
 alias jn='jupyter notebook'
 
+function uid {
+    if [[ $# -ne 1 ]];
+        then echo "Usage: uid length"
+        return -1
+    fi
+    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w $1 | head -n 1 | tr '[:upper:]' '[:lower:]'
+}
+
+function kattle {
+    if [[ $# -ne 3 ]] || [[ "$1" != "create" ]] || [[ "$2" != "-f" ]]; then
+        echo "Usage: kattle create -f file.yml"
+        return -1
+    fi
+    yaml_file="$3"
+    cat "$yaml_file" | yq -y "(.metadata.name) |= . + \"-`uid 6`\"" | kubectl create -f -
+}
