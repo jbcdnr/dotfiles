@@ -92,3 +92,11 @@ function kattle {
         return -1
     fi
 }
+
+function gcloud_zone {
+    gcloud compute instances list --filter=name=`hostname` --format "get(zone)" | awk -F/ '{print $NF}'
+}
+
+function gcloud_suicide {
+    gcloud compute instances stop `hostname` --zone `gcloud_zone`
+}
