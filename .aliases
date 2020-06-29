@@ -101,3 +101,5 @@ function gcloud_suicide {
     read -t 30 -k 1 "?Will commit suicide in 30s. Press any key to cancel..." ||
         gcloud compute instances stop `hostname` --zone `gcloud_zone`  # executed only if prompt failed
 }
+
+
