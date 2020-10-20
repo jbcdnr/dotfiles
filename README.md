@@ -1,6 +1,6 @@
 # JB's Dotfiles
 
-This are my dot files for macOS and Linux. Feel free to use them.
+These are my dot files for macOS and Linux. Feel free to use them.
 
 To install them check out the dependencies below and run the following commands:
 
