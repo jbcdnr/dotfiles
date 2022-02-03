@@ -83,3 +83,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 Remap caps lock to escape
 
 `Preferences / Keyboard / Modifier Keys...`
+
+Firefox disable zoom with ctrl + mousewheel.
+Visit [about:config](about:config) in Firefox and set `mousewheel.with_meta.action` and `mousewheel.with_control.action` to 1.
