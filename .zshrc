@@ -13,7 +13,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/scala
   zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/sublime
-  zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/macos
   zgen oh-my-zsh plugins/gcloud
   zgen oh-my-zsh plugins/kubectl
 
@@ -51,24 +51,6 @@ if [ -f /usr/local/etc/profile.d/z.sh ]; then
   . /usr/local/etc/profile.d/z.sh
 fi
 
-# disable conda environment prefix
-if hash conda 2>/dev/null; then
-  conda config --set changeps1 False
-fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/cordonni/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-    conda config --set changeps1 False
-else
-    if [ -f "/Users/cordonni/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/cordonni/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/cordonni/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# disable conda environment prefix if installed
+( conda config --set changeps1 False ) 2> /dev/null
 
