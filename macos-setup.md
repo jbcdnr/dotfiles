@@ -12,29 +12,30 @@ brew install --cask \
     firefox \
     google-cloud-sdk
     iterm2 \
+    mactex \
     rectangle \
+    signal \
     slack \
     spotify \
-    visual-studio-code \
-    tev \
-    mactex \
-    signal \
-    whatsapp \
     telegram \
+    tev \
+    visual-studio-code \
+    vlc \
+    whatsapp \
     zoom
 ```
 
 ```bash
 brew install \
-    parallel \
+    coreutils \
     git \
     git-open \
-    tmux \
-    npm \
-    yarn \
-    coreutils \
     homebrew/cask-fonts/font-inconsolata \
-    homebrew/cask-fonts/font-inconsolata-nerd-font
+    homebrew/cask-fonts/font-inconsolata-nerd-font \
+    npm \
+    parallel \
+    tmux \
+    yarn
 ```
 
 Quick autohide dock
@@ -86,3 +87,9 @@ Remap caps lock to escape
 
 Firefox disable zoom with ctrl + mousewheel.
 Visit [about:config](about:config) in Firefox and set `mousewheel.with_meta.action` and `mousewheel.with_control.action` to 1.
+
+## Set default apps
+```
+brew install duti
+duti duti.conf
+```
