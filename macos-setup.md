@@ -1,8 +1,12 @@
+# MacOS Set up
+
 Install [brew](https://brew.sh)
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+Install apps
 
 ```bash
 brew install --cask \
@@ -25,6 +29,8 @@ brew install --cask \
     zoom
 ```
 
+Install packages
+
 ```bash
 brew install \
     coreutils \
@@ -38,6 +44,23 @@ brew install \
     yarn
 ```
 
+Setup Google Cloud
+
+```
+gcloud auth login
+```
+
+Set up Anaconda
+
+```
+/usr/local/anaconda3/bin/conda init zsh
+```
+
+
+Select dynamic profile in iTerm
+
+`iTerm2 > Advanced > Path to folder with dynamic profiles : ~/dotfiles/iTerm2`
+
 Quick autohide dock
 
 ```
@@ -49,20 +72,21 @@ defaults write com.apple.dock show-recents -int 0 && \
 killall Dock
 ```
 
-Set GCP
-
+Set hot corners
 ```
-gcloud auth login
-```
-
-Set up conda
-
-```
-/usr/local/anaconda3/bin/conda init zsh
+defaults write com.apple.dock wvous-bl-corner -integer 4        # Bottom left Desktop
+defaults write com.apple.dock wvous-bl-modifier -integer 131072 # with Shift
+defaults write com.apple.dock wvous-tl-corner -integer 1        # Top left nothing
+defaults write com.apple.dock wvous-tr-corner -integer 1        # Top right nothing
+defaults write com.apple.dock wvous-br-corner -integer 1        # Bottom right nothing
 ```
 
 
-Select dynamic profile in iTerm (~/dotfiles/iTerm2)
+Three fingers drag enabled
+```
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+```
 
 
 Finder: show all filename extensions
@@ -72,6 +96,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 ```
 
 Disable the warning when changing a file extension
+
 ```
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 ```
@@ -85,10 +110,12 @@ Remap caps lock to escape
 
 `Preferences / Keyboard / Modifier Keys...`
 
-Firefox disable zoom with ctrl + mousewheel.
+Firefox disable zoom with ctrl + mousewheel
+
 Visit [about:config](about:config) in Firefox and set `mousewheel.with_meta.action` and `mousewheel.with_control.action` to 1.
 
-## Set default apps
+Set default apps
+
 ```
 brew install duti
 duti duti.conf
