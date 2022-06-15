@@ -20,7 +20,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting
 
   # themes
-  zgen load denysdovhan/spaceship-prompt spaceship
+  zgen load spaceship-prompt/spaceship-prompt spaceship
 
   # generate the init script from plugins above
   zgen save
