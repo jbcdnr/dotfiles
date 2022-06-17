@@ -16,9 +16,11 @@ brew install --cask \
     firefox \
     google-cloud-sdk
     iterm2 \
+    kDrive \
     mactex \
     rectangle \
     signal \
+    sketch \
     slack \
     spotify \
     telegram \
@@ -34,6 +36,7 @@ Install packages
 ```bash
 brew install \
     coreutils \
+    gh \
     git \
     git-open \
     homebrew/cask-fonts/font-inconsolata \
