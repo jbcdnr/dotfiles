@@ -36,15 +36,31 @@ Install packages
 ```bash
 brew install \
     coreutils \
+    coreutils \
+    findutils \
+    gawk \
     gh \
     git \
     git-open \
-    homebrew/cask-fonts/font-inconsolata \
-    homebrew/cask-fonts/font-inconsolata-nerd-font \
+    gnu-getopt \
+    gnu-indent \
+    gnu-sed \
+    gnu-tar \
+    gnutls \
+    grep \
     npm \
     parallel \
     tmux \
     yarn
+```
+
+Install fonts
+
+```bash
+brew install \
+    homebrew/cask-fonts/font-inconsolata \
+    homebrew/cask-fonts/font-inconsolata-nerd-font \
+    font-droid-sans-mono-for-powerline
 ```
 
 Setup Google Cloud
