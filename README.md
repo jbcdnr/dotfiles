@@ -39,29 +39,29 @@ chsh -s /bin/zsh `whoami`
 
 Follow [setup instruction](macos-setup.md). 
 
-| **Deprecated**
-| 
-| Hide the dock and change the animation delay:
-| 
-| ```
-| defaults write com.apple.dock autohide-time-modifier -float 0.15; killall Dock
-| ```
-| 
-| Enable 3 fingers drag for trackpad.
-| 
-| Remap caps lock to escape.
-| 
-| ### iTerm config
-| 
-| - Appearance:
-|       - theme minimal
-| - Colors:
-|       - use solarized dark color scheme
-|       - uncheck "Brighten bold text"
-| - Text:
-|       - install [Powerline fonts](https://github.com/powerline/fonts), use Droid Sans Mono.
-| - Keys:
-|       - use the preset "Natural Text Editing"
+> **Deprecated**
+> 
+> Hide the dock and change the animation delay:
+> 
+> ```
+> defaults write com.apple.dock autohide-time-modifier -float 0.15; killall Dock
+> ```
+> 
+> Enable 3 fingers drag for trackpad.
+> 
+> Remap caps lock to escape.
+> 
+> ### iTerm config
+> 
+> - Appearance:
+>       - theme minimal
+> - Colors:
+>       - use solarized dark color scheme
+>       - uncheck "Brighten bold text"
+> - Text:
+>       - install [Powerline fonts](https://github.com/powerline/fonts), use Droid Sans Mono.
+> - Keys:
+>       - use the preset "Natural Text Editing"
 
 ## Credits
 
