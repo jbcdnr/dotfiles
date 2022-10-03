@@ -64,7 +64,8 @@ Install fonts
 brew install \
     homebrew/cask-fonts/font-inconsolata \
     homebrew/cask-fonts/font-inconsolata-nerd-font \
-    font-droid-sans-mono-for-powerline
+    font-droid-sans-mono-for-powerline \
+    font-menlo-for-powerline
 ```
 
 Setup Google Cloud
