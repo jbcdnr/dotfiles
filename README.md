@@ -20,48 +20,9 @@ Please open an issue if you get in troubles.
 
 ## Dependencies
 
-### Install packages
-
-Install [HomeBrew](https://brew.sh/) and then some really useful software:
-
-```bash
-brew cask install iterm2 sublime-text visual-studio-code skim spectacle
-brew install parallel tmux vim thefuck zsh
-```
-
-Use ZSH
-
-```bash
-chsh -s /bin/zsh `whoami`
-```
-
 ### macOS config
 
-Follow [setup instruction](macos-setup.md). 
-
-> **Deprecated**
-> 
-> Hide the dock and change the animation delay:
-> 
-> ```
-> defaults write com.apple.dock autohide-time-modifier -float 0.15; killall Dock
-> ```
-> 
-> Enable 3 fingers drag for trackpad.
-> 
-> Remap caps lock to escape.
-> 
-> ### iTerm config
-> 
-> - Appearance:
->       - theme minimal
-> - Colors:
->       - use solarized dark color scheme
->       - uncheck "Brighten bold text"
-> - Text:
->       - install [Powerline fonts](https://github.com/powerline/fonts), use Droid Sans Mono.
-> - Keys:
->       - use the preset "Natural Text Editing"
+Follow the [setup instruction](macos-setup.md). 
 
 ## Credits
 

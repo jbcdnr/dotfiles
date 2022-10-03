@@ -14,7 +14,7 @@ brew install --cask \
     anaconda \
     figma \
     firefox \
-    google-cloud-sdk
+    google-cloud-sdk \
     iterm2 \
     kDrive \
     mactex \
@@ -36,7 +36,6 @@ Install packages
 ```bash
 brew install \
     coreutils \
-    coreutils \
     findutils \
     gawk \
     gh \
@@ -48,10 +47,15 @@ brew install \
     gnu-tar \
     gnutls \
     grep \
+    ncdu \
     npm \
     parallel \
+    thefuck \
+    tldr \
     tmux \
-    yarn
+    tree \
+    yarn \
+    z
 ```
 
 Install fonts
@@ -139,3 +143,5 @@ Set default apps
 brew install duti
 duti duti.conf
 ```
+
+Disable touch bar
