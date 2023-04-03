@@ -7,6 +7,8 @@ source "$HOME/.zgen/zgen.zsh"
 # if the init scipt doesn't exist
 if ! zgen saved; then
 
+  pip install thefuck
+
   # plugins
   zgen oh-my-zsh
   zgen oh-my-zsh plugins/sbt
@@ -16,7 +18,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/gcloud
   zgen oh-my-zsh plugins/kubectl
   zgen oh-my-zsh plugins/thefuck
-
+  
   zgen load zsh-users/zsh-syntax-highlighting
 
   # themes
