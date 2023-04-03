@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-alias sopen="open -a Sublime\ Text"
-alias fopen="open -a Finder"
+
 alias copy=pbcopy
 alias paste=pbpaste
 
@@ -13,93 +12,3 @@ alias ls="ls --color=auto"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Intuitive map function
-# For example, to list all directories that contain a certain file:
-# find . -name .gitattributes | map dirname
-alias map="xargs -n1"
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
-
-# watch dir modif and run command
-function watch {
-  watch_dir=$1
-  shift
-  $@
-  fswatch -o --latency=1 $watch_dir | while read -r; do $@; done
-}
-
-alias jn='jupyter notebook'
-
-function uid {
-    if [[ $# -ne 1 ]];
-        then echo "Usage: uid length"
-        return -1
-    fi
-    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w $1 | head -n 1 | tr '[:upper:]' '[:lower:]'
-}
-
-
-function kattle_usage {
-   echo "Usages:"
-   echo "  kattle create -f file.yml"
-   echo "  kattle run -f file.yml -- command to run"
-}
-
-function kattle_create {
-    if [[ $# -ne 3 ]] || [[ "$1" != "create" ]] || [[ "$2" != "-f" ]]; then
-        echo "Usage: kattle create -f file.yml"
-        return -1
-    fi
-    yaml_file="$3"
-    cat "$yaml_file" | yq -y "(.metadata.name) |= . + \"-`uid 6`\"" | kubectl create -f -
-}
-
-function kattle_run {
-    if [[ $# -lt 5 ]] || [[ "$4" != "--" ]]; then
-        echo "Usage: kattle run -f file.yml -- command to runs"
-        return -1
-    fi
-    yaml_file="$3"
-    shift; shift; shift; shift;
-    command="$@"
-    cat "$yaml_file" \
-      | yq -y "(.metadata.name) |= . + \"-`uid 6`\"" \
-      | yq -y "(.spec.containers[0]).command |= [\"bash\", \"-c\", \"${command}\"]" \
-      | kubectl create -f -
-}
-
-function kattle {
-    if [[ $# -lt 3 ]] || [[ "$2" != "-f" ]]; then
-        kattle_usage
-        return -1
-    fi
-
-    if [[ "$1" == "create" ]]; then
-        kattle_create $@
-    elif [[ "$1" == "run" ]]; then
-        kattle_run $@
-    else
-        kattle_usage
-        return -1
-    fi
-}
-
-function gcloud_zone {
-    gcloud compute instances list --filter=name=`hostname` --format "get(zone)" | awk -F/ '{print $NF}'
-}
-
-function gcloud_suicide {
-    read -t 30 -k 1 "?Will commit suicide in 30s. Press any key to cancel..." ||
-        gcloud compute instances stop `hostname` --zone `gcloud_zone`  # executed only if prompt failed
-}
-
-

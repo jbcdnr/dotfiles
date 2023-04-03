@@ -24,9 +24,6 @@ export PATH=$PATH:/usr/local/sbin
 
 export PATH=$HOME/bin:$PATH
 
-# Path for non Mac command line binaries 
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
 # Path to sketchtool (on mac)
 export PATH="/Applications/Sketch.app/Contents/Resources/sketchtool/bin:$PATH"
 
@@ -36,3 +33,6 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 # binaries
 export PATH=$HOME/.local/bin/:$PATH
 
+# Path for non Mac command line binaries 
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
