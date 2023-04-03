@@ -1,6 +1,9 @@
 # install zgen for the first time
 [ -e "$HOME/.zgen/zgen.zsh" ] || git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # load zgen
 source "$HOME/.zgen/zgen.zsh"
 
@@ -18,6 +21,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/gcloud
   zgen oh-my-zsh plugins/kubectl
   zgen oh-my-zsh plugins/thefuck
+  zgen oh-my-zsh plugins/git-machete
   
   zgen load zsh-users/zsh-syntax-highlighting
 
