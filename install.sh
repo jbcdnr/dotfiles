@@ -33,7 +33,8 @@ else
     curl -L https://raw.githubusercontent.com/VirtusLab/git-machete/master/completion/git-machete.completion.zsh -o $HOME/.oh-my-zsh/custom/plugins/git-machete/git-machete.plugin.zsh
 fi
 
-DOTFILES_CLONE_PATH=$HOME/dotfiles
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+DOTFILES_CLONE_PATH="$SCRIPT_DIR"
 for dotfile in "$DOTFILES_CLONE_PATH/".*; do
   # Skip `..` and '.'
   [[ $dotfile =~ \.{1,2}$ ]] && continue
