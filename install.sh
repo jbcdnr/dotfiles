@@ -24,14 +24,28 @@ fi
 # fi
 
 # Install and configure git-machete (if it is not already installed).
-if [ -d "~/.oh-my-zsh/custom/plugins/git-machete/" ]
+git machete
+if [ $? -eq 0 ] && [ -d "~/.oh-my-zsh/custom/plugins/git-machete/" ]
 then
     echo "git-machete is already installed"
 else
-    sudo -H pip install --user -U git-machete
+    pip install -U git-machete
     mkdir -p ~/.oh-my-zsh/custom/plugins/git-machete/
     curl -L https://raw.githubusercontent.com/VirtusLab/git-machete/master/completion/git-machete.completion.zsh -o $HOME/.oh-my-zsh/custom/plugins/git-machete/git-machete.plugin.zsh
 fi
+
+# Install atuin
+atuin -V
+if [ $? -eq 0 ] 
+then
+    echo "atuin is already installed"
+else
+    bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
+    # remove atuin lines from .zshrc
+    sed -i '/atuin/d' ~/.zshrc
+    echo 
+fi
+
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 DOTFILES_CLONE_PATH="$SCRIPT_DIR"
