@@ -41,11 +41,7 @@ then
     echo "atuin is already installed"
 else
     bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
-    # remove atuin lines from .zshrc
-    sed -i '/atuin/d' ~/.zshrc
-    echo 
 fi
-
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 DOTFILES_CLONE_PATH="$SCRIPT_DIR"
@@ -63,3 +59,7 @@ for dotfile in "$DOTFILES_CLONE_PATH/".*; do
   echo "Symlinking $dotfile"
   ln -sf "$dotfile" "$HOME"
 done
+
+# remove atuin lines from .zshrc
+sed -i '/atuin/d' ~/.zshrc
+echo 'eval "$(atuin init zsh --disable-up-arrow)"' >> ~/.zshrc 
