@@ -63,3 +63,6 @@ done
 # remove atuin lines from .zshrc
 sed -i '/atuin/d' ~/.zshrc
 echo 'eval "$(atuin init zsh --disable-up-arrow)"' >> ~/.zshrc 
+
+# add iTerm integration
+curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | zsh
