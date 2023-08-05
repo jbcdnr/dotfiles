@@ -1,0 +1,4 @@
+user.name = "Jean-Baptiste Cordonnier"
+user.email = "jbcdnr@gmail.com"
+ui.default-command = "log"
+ui.pager = "less -FX"
